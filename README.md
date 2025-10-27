@@ -33,5 +33,8 @@ user のログイン用初期データ
 URL
 　・開発環境： http://localhost/login
 　・phpMyAdmin: http://localhost:8080/
-　
+
+ER図
+<img width="1920" height="1080" alt="スクリーンショット 2025-10-27 172547" src="https://github.com/user-attachments/assets/881b79e7-8946-4716-87ff-733a8f7549af" />
+
 　
