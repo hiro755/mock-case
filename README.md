@@ -19,7 +19,8 @@ Laravel 環境構築
  5.php artisan key:generate
  6.php artisan migrate
  7.php artisan db:seed
-　* 8.php artisan storage:linkを実行
+ 8.php artisan storage:link
+ 9.cp -r sample_images/* storage/app/public/
 
 user のログイン用初期データ
  ・メールアドレス：hiro2536@icloud.com
