@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- ▼ タブエリア --}}
     <div class="tab-wrapper">
         <div class="tab-links">
             <a href="{{ url('/?tab=recommend') }}" class="tab-link {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
@@ -11,7 +10,6 @@
 
     <div class="full-width-border"></div>
 
-    {{-- ▼ 商品一覧 --}}
     <div class="container product-list-container">
         @if ($products->isEmpty())
             <p>該当する商品はありません。</p>

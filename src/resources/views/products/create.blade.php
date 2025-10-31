@@ -9,7 +9,6 @@
     <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
-        {{-- 商品画像 --}}
         <div class="custom-form-group">
             <label>商品画像</label>
             <div class="image-upload-wrapper">
@@ -23,16 +22,13 @@
             @enderror
         </div>
 
-        {{-- 商品の詳細 --}}
         <div class="section-title">商品の詳細</div>
 
-        {{-- カテゴリー --}}
         <div class="custom-form-group category-group">
             <label>カテゴリー</label>
             <input type="hidden" name="category" id="selected-category">
 
             <div class="category-buttons">
-                {{-- 1列目 --}}
                 <div class="category-row">
                     <button type="button">ファッション</button>
                     <button type="button">家電</button>
@@ -42,7 +38,6 @@
                     <button type="button">コスメ</button>
                 </div>
 
-                {{-- 2列目 --}}
                 <div class="category-row">
                     <button type="button">本</button>
                     <button type="button">ゲーム</button>
@@ -52,7 +47,6 @@
                     <button type="button">アクセサリー</button>
                 </div>
 
-                {{-- 3列目 --}}
                 <div class="category-row align-left">
                     <button type="button">おもちゃ</button>
                     <button type="button">ベビー・キッズ</button>
@@ -60,7 +54,6 @@
             </div>
         </div>
 
-        {{-- 商品の状態 --}}
         <div class="custom-form-group">
             <label>商品の状態</label>
             <select name="condition">
@@ -72,7 +65,6 @@
             </select>
         </div>
 
-        {{-- 商品名と説明 --}}
         <div class="section-title">商品名と説明</div>
 
         <div class="custom-form-group">
@@ -90,7 +82,6 @@
             <textarea name="description" rows="4">{{ old('description') }}</textarea>
         </div>
 
-        {{-- 販売価格 --}}
         <div class="custom-form-group">
             <label>販売価格</label>
             <div class="price-input-wrapper">
@@ -99,16 +90,13 @@
             </div>
         </div>
 
-        {{-- 出品ボタン --}}
         <div class="submit-btn">
             <button type="submit">出品する</button>
         </div>
     </form>
 </div>
 
-{{-- JS --}}
 <script>
-    // カテゴリー選択処理
     const buttons = document.querySelectorAll('.category-buttons button');
     const hiddenInput = document.getElementById('selected-category');
 
@@ -120,7 +108,6 @@
         });
     });
 
-    // 画像アップロード処理
     const imageInput = document.getElementById('imageInput');
     const uploadBox = document.getElementById('uploadBox');
     const uploadBtn = document.getElementById('uploadBtn');
@@ -141,7 +128,7 @@
 
             uploadBox.innerHTML = '';
             uploadBox.appendChild(img);
-            uploadBox.classList.add('hide'); // 枠線を消す
+            uploadBox.classList.add('hide');
         };
         reader.readAsDataURL(file);
     });

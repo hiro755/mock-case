@@ -39,7 +39,6 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.all
 Route::middleware('auth')->group(function () {
     Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
     Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
     Route::get('/mylist', [ProductController::class, 'myList'])->name('mylist');
 });
 
